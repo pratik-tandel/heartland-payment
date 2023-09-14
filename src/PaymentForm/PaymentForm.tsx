@@ -1,14 +1,13 @@
 import './PaymentForm.css';
 import { useEffect, useState } from 'react';
 
-// const Heartland = window?.Heartland;
 const windowObj = window as any;
 
 function PaymentForm() {
     const [loaded, setLoaded] = useState(false);
     const [heartLand, setHeartLand] = useState<any>();
-    const [squarePayments, setSquarePayments] = useState<any>();
-    const apiKey = 'pkapi_cert_dICuOzxyeBi9fgp5nD';
+
+    const apiKey = 'api_key';
     const paymentUrl = 'https://api2.heartlandportico.com/SecureSubmit.v1/token/2.1/securesubmit.js';
 
 
@@ -214,27 +213,6 @@ function PaymentForm() {
         }
     }, []);
 
-    // const styles = {
-    //     formWrapper: {
-    //         maxWidth: '600px',
-    //         margin: '0 auto'
-    //     },
-    //     cardWrapper: {
-    //         display: 'flex',
-    //         flexDirection: 'column',
-    //         border: '1px solid black'
-    //     },
-    //     cardNumber: {
-    //         flexGrow: '1'
-    //     },
-    //     expiryCvvContainer: {
-    //         display: 'flex',
-    //         flexDirection: 'row',
-    //         borderTop: '1px solid black',
-    //         borderBottom: '1px solid black'
-    //     }
-    // };
-
     return (
         <>
             <div>Card Information</div>
@@ -253,17 +231,6 @@ function PaymentForm() {
                     <div id="iframesSubmit" />
                 </form>
             </div>
-
-            {/* <div className="container">
-                <div className="row">
-                    <input className="input" type="text" placeholder="Input 1" />
-                </div>
-
-                <div className="row">
-                    <input className="input" type="text" placeholder="Input 2" />
-                    <input className="input" type="text" placeholder="Input 3" />
-                </div>
-            </div> */}
         </>
 
     )
