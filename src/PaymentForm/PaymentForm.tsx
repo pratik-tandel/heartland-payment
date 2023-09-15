@@ -30,8 +30,7 @@ function PaymentForm() {
                     fields: {
                         cardNumber: {
                             target: 'iframesCardNumber',
-                            placeholder: '•••• •••• •••• ••••',
-
+                            placeholder: '•••• •••• •••• ••••'
                         },
                         cardExpiration: {
                             target: 'iframesCardExpiration',
@@ -77,7 +76,7 @@ function PaymentForm() {
                             'line-height': '1.42857143',
                             'color': '#555',
                             'background-color': '#fff',
-                            'border': '1px solid #ccc',
+                            // 'border': '1px solid #000',
                             'border-radius': '0px',
                             '-webkit-box-shadow': 'inset 0 1px 1px rgba(0,0,0,.075)',
                             'box-shadow': 'inset 0 1px 1px rgba(0,0,0,.075)',
@@ -138,8 +137,13 @@ function PaymentForm() {
                         '#heartland-field[placeholder]': {
                             'letter-spacing': '4px'
                         },
+                        '#heartland-field[name=cardExpiration]': {
+                            'border-right': '2px solid #000',
+                            'border-top': '2px solid #000'
+                        },
                         '#heartland-field[name=cardCvv]': {
                             'background-size': '63px 40px',
+                            'border-top': '2px solid #000'
                         },
                         'input#heartland-field[name=cardNumber]': {
                             'background-size': '55px 35px'
